@@ -1,29 +1,31 @@
 import json
 
-categories = set(())
+def list_categories():
 
-with open('../json/articles.json') as f:
+    categories = set(())
 
-    articles = json.load(f)
+    with open('../json/articles.json') as f:
 
-    for i in articles:
-        categoryList = articles[i]["categoriaIAB"]
-        for j in range(len(categoryList)):
-            category = str(categoryList[j]["class"])
-            if category not in categories:
-                categories.add(category) 
-    f.close()
+        articles = json.load(f)
 
-with open('../json/videos.json') as f:
+        for i in articles:
+            categoryList = articles[i]["categoriaIAB"]
+            for j in range(len(categoryList)):
+                category = str(categoryList[j]["class"])
+                if category not in categories:
+                    categories.add(category) 
+        f.close()
 
-    articles = json.load(f)
+    with open('../json/videos.json') as f:
 
-    for i in articles:
-        categoryList = articles[i]["categoriaIAB"]
-        for j in range(len(categoryList)):
-            category = str(categoryList[j]["class"])
-            if category not in categories:
-                categories.add(category) 
-    f.close()
+        articles = json.load(f)
 
-print(categories)
+        for i in articles:
+            categoryList = articles[i]["categoriaIAB"]
+            for j in range(len(categoryList)):
+                category = str(categoryList[j]["class"])
+                if category not in categories:
+                    categories.add(category) 
+        f.close()
+
+    return(categories)
