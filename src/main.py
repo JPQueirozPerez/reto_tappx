@@ -1,8 +1,10 @@
-# from kw_dict import videos
 from kwArtcl import *
 from kwVideos import *
+import categories
 
-# Get article and video keywrods translate
+categories = categories.list_categories()
+print(categories)
+
 articles = kwArt()
 print(articles)
 
