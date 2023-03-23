@@ -1,16 +1,20 @@
 import kwArtcl as kA
 import kwVideos as kV
 import categories as cat
+import word2vec as w2v
+import linker as l
 import json
 
 categories = cat.list_categories()
 print(categories)
 
-articles = kA.kwArt()
-print(articles)
+articles = w2v.punctuate_srcs(wkA.kwArt(), categories)
+#print(articles)
 
-# videos = kV.kwVideos()
+videos = w2v.punctuate_srcs(kV.kwVideos(), categories)
 # print(videos)
+
+data = l.link_srcs(articles, videos)
 
 
 def writeToJSONFile(path, fileName, data):
@@ -21,6 +25,6 @@ def writeToJSONFile(path, fileName, data):
 
 # Example
 # data = categories
-# data['key'] = 'value'
+data['key'] = 'value'
 
-# writeToJSONFile('./','file-name2',data)
+writeToJSONFile('./','json_scores',data)
