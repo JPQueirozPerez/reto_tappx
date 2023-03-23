@@ -5,10 +5,11 @@ import word2vec as w2v
 import linker as l
 import json
 
+
 categories = cat.list_categories()
 print(categories)
 
-articles = w2v.punctuate_srcs(wkA.kwArt(), categories)
+articles = w2v.punctuate_srcs(kA.kwArt(), categories)
 #print(articles)
 
 videos = w2v.punctuate_srcs(kV.kwVideos(), categories)
@@ -23,8 +24,7 @@ def writeToJSONFile(path, fileName, data):
         json.dump(data, fp)
 
 
-# Example
-# data = categories
+data = categories
 data['key'] = 'value'
 
-writeToJSONFile('./','json_scores',data)
+writeToJSONFile('../json','json_scores',data)
