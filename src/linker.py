@@ -1,6 +1,5 @@
+def linker(punct_artcl, punct_vid):
 
-
-def(punct_artcl, punct_vid):
 	dict1 = {}
 	dict2 = {}
 	dict3 = {}

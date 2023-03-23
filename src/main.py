@@ -9,8 +9,8 @@ print(categories)
 articles = kA.kwArt()
 print(articles)
 
-#videos = kV.kwVideos()
-#print(videos)
+# videos = kV.kwVideos()
+# print(videos)
 
 
 def writeToJSONFile(path, fileName, data):
@@ -20,7 +20,7 @@ def writeToJSONFile(path, fileName, data):
 
 
 # Example
-#data = categories
-#data['key'] = 'value'
+# data = categories
+# data['key'] = 'value'
 
-#writeToJSONFile('./','file-name2',data)
+# writeToJSONFile('./','file-name2',data)
