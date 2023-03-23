@@ -1,9 +1,10 @@
 from gensim.models import KeyedVectors
 from sklearn.metrics.pairwise import cosine_similarity
 
+
 #Returns a dictionary with every keyword punctuated with every category via word2vec
 def punctuate_srcs(dict_srcs, categories):
-	word_vectors = KeyedVectors.load_word2vec_format('/Users/ggispert/Desktop/keyed/GoogleNews-vectors-negative300.bin.gz', binary=True)
+	word_vectors = KeyedVectors.load_word2vec_format('../corpus/GoogleNews-vectors-negative300.bin.gz', binary=True)
 	for src in dict_srcs:
 		dict_aux = {}
 		for cat in categories:

@@ -1,5 +1,3 @@
-
-
 def link_srcs(punct_artcl, punct_vid):
 	dict1 = {}
 	dict2 = {}

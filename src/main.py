@@ -1,16 +1,16 @@
-from kwArtcl import *
-from kwVideos import *
-import categories
+import kwArtcl as kA
+import kwVideos as kV
+import categories as cat
 import json
 
-categories = categories.list_categories()
+categories = cat.list_categories()
 print(categories)
 
-articles = kwArt()
+articles = kA.kwArt()
 print(articles)
 
-#videos = kwVideos()
-#print(videos)
+# videos = kV.kwVideos()
+# print(videos)
 
 
 def writeToJSONFile(path, fileName, data):
@@ -20,7 +20,7 @@ def writeToJSONFile(path, fileName, data):
 
 
 # Example
-#data = categories
-#data['key'] = 'value'
+# data = categories
+# data['key'] = 'value'
 
-#writeToJSONFile('./','file-name2',data)
+# writeToJSONFile('./','file-name2',data)
