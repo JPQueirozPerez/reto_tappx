@@ -19,7 +19,7 @@ data = l.link_srcs(articles, videos)
 
 
 def writeToJSONFile(path, fileName, data):
-    filePathNameWExt = './' + path + '/' + fileName + '.json'
+    filePathNameWExt = '../' + path + '/' + fileName + '.json'
     with open(filePathNameWExt, 'w') as fp:
         json.dump(data, fp)
 
@@ -27,4 +27,4 @@ def writeToJSONFile(path, fileName, data):
 data = categories
 data['key'] = 'value'
 
-writeToJSONFile('../json','json_scores',data)
+writeToJSONFile('json','json_scores',data)
