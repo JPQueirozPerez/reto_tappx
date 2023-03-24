@@ -1,6 +1,7 @@
 import string
 import json
 
+
 def list_categories():
 
     categories = []
@@ -30,7 +31,7 @@ def list_categories():
                 for c in string.punctuation:
                     category = category.replace(c, '')
                 if category not in categories:
-                    categories.append(category) 
+                    categories.append(category)
         f.close()
 
-    return(categories)
+    return (categories)

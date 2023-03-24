@@ -3,8 +3,11 @@ import string
 from googletrans import Translator, constants
 from pprint import pprint
 
+
 def kwArt():
+
     with open("../json/articles.json") as dict_article:
+
         articles = json.load(dict_article)
         article_kw = {}
         for i in articles:
@@ -13,9 +16,9 @@ def kwArt():
 
 # TRANSLATE USING GOOGLE API THE KEYWORDS GIVEN
     translator = Translator()
-    # translate a spanish text to english keywords from article and lower all the letters
+    # translate spanish keywords to english from article and lower all the letters
     for article in articles:
-        articles_list =[]
+        articles_list = []
         for value in articles[article]['keywords']:
             translation = translator.translate(value)
             text_eng = (translation.text)
@@ -28,4 +31,5 @@ def kwArt():
                 articles_list.append(text_eng.lower())
             # print(text_eng)
         articles[article] = articles_list
+        
     return articles
